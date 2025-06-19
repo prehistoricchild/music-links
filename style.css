@@ -58,10 +58,12 @@ h1 {
   height: 32px;
   margin: 0 8px;
   vertical-align: middle;
+  display: block; /* 🔧 prevents extra space or dash */
   filter: brightness(100%);
   transition: transform 0.2s ease, filter 0.2s ease;
   cursor: pointer;
 }
+
 
 .social-icons img:hover {
   transform: scale(1.2);

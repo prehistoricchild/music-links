@@ -40,6 +40,15 @@ h1 {
   margin-bottom: 10px;
 }
 
+/* 🌟 New subtitle/message style */
+.subtitle {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
 .social-icons {
   margin: 10px 0 30px;
 }

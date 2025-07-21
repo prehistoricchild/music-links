@@ -11,7 +11,6 @@ body {
   min-height: 100vh; overflow-y: auto;
   position: relative;
 }
-
 body::before {
   content: "";
   position: fixed; top: 0; left: 0;
@@ -19,6 +18,44 @@ body::before {
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(10px);
   z-index: -1;
+}
+
+/* Mobile menu toggle & icon */
+.menu-toggle { display: none; }
+.menu-icon {
+  display: none;
+  position: absolute; top: 20px; left: 20px;
+  font-size: 28px; color: white; cursor: pointer;
+  z-index: 3;
+}
+
+/* Mobile nav drawer */
+.mobile-nav {
+  position: fixed; top: 0; left: -260px;
+  width: 260px; height: 100%;
+  background: rgba(0,0,0,0.9); backdrop-filter: blur(10px);
+  padding: 80px 20px; box-sizing: border-box;
+  transition: left 0.3s ease; z-index: 2;
+}
+.mobile-links a {
+  display: block; margin: 16px 0;
+  font-size: 18px; color: white;
+  text-decoration: none; text-transform: lowercase;
+}
+.mobile-socials {
+  position: absolute; bottom: 40px; left: 0; width: 100%;
+  display: flex; justify-content: space-around;
+}
+.mobile-socials img {
+  width: 32px; filter: brightness(100%);
+  transition: transform 0.2s;
+}
+.mobile-socials img:hover {
+  transform: scale(1.1); filter: brightness(150%);
+}
+/* Slide in when toggled */
+#menu-toggle:checked ~ .mobile-nav {
+  left: 0;
 }
 
 /* Header logo */
@@ -39,7 +76,7 @@ body::before {
   display: flex; justify-content: space-between; align-items: center;
   z-index: 2;
 }
-/* Word Images (smaller) */
+/* Word Images */
 .top-left img {
   height: 24px; width: auto;
   cursor: pointer; filter: brightness(100%);
@@ -145,44 +182,36 @@ body::before {
   font-size:14px; line-height:1.6; color:#ddd;
 }
 
-/* ==========================
-   Mobile Responsive Styles
-   ========================== */
+/* =========================================================================
+   Responsive: show hamburger & hide desktop links on mobile
+   ======================================================================== */
 @media (max-width: 768px) {
-  .top-bar {
-    position: relative; top: 0; left: 0; right: 0;
-    padding: 10px 0;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .top-left, .top-right {
+  /* Show hamburger, hide desktop left links */
+  .menu-icon { display: block; }
+  .top-left { display: none; }
+
+  /* Center socials below hamburger */
+  .top-right {
+    margin-top: 60px;
     justify-content: center;
     gap: 12px;
   }
-  .logo-header {
-    margin-top: 40px;
-  }
-  .logo {
-    width: 180px;
-  }
+
+  /* Shrink logo */
+  .logo-header { margin-top: 40px; }
+  .logo { width: 180px; }
+
+  /* EP adjustments */
   .ep-section {
     margin: 80px auto 20px;
     padding: 0 10px;
   }
-  .ep-info {
-    font-size: 16px;
-  }
-  .ep-image {
-    width: 100%;
-  }
   .presave-btn {
-    width: 100%;
-    font-size: 16px;
+    width: 100%; font-size: 16px;
     padding: 12px 0;
   }
   .ep-about {
     margin: 20px auto 40px;
-    padding: 0 10px;
-    font-size: 16px;
+    font-size: 16px; padding: 0 10px;
   }
 }

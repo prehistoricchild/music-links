@@ -58,16 +58,27 @@ body::before {
   z-index: 2;
 }
 
-.top-left,
+.top-left {
+  display: flex;
+  gap: 16px;
+}
+
 .top-right {
   display: flex;
   gap: 16px;
 }
 
-.top-left img,
 .top-right img {
-  width: 70px;
-  height: auto;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  filter: brightness(100%);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.top-left img {
+  height: 32px;
+  width: auto;
   cursor: pointer;
   filter: brightness(100%);
   transition: transform 0.2s ease, filter 0.2s ease;

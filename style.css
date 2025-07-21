@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
 body {
   font-family: Arial, sans-serif;
   background-image: url("background.jpg");
@@ -170,7 +172,6 @@ body::before {
 
 /* 🌼 EP Section */
 .ep-section {
-  position: relative;
   max-width: 500px;
   margin: 60px auto 20px;
   text-align: center;
@@ -181,19 +182,15 @@ body::before {
   height: auto;
   border-radius: 12px;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
-.ep-overlay {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  padding: 0 20px;
+.ep-info {
+  font-size: 16px;
+  color: #f2f2f2;
+  font-style: italic;
+  margin-bottom: 16px;
+  line-height: 1.5;
 }
 
 .presave-btn {
@@ -202,10 +199,8 @@ body::before {
   padding: 12px 24px;
   text-decoration: none;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 14px;
   transition: background-color 0.3s ease;
-  margin-top: 12px;
-  display: inline-block;
 }
 
 .presave-btn:hover {
@@ -221,7 +216,40 @@ body::before {
   font-size: 14px;
   line-height: 1.6;
   color: #ddd;
-  font-family: 'Arial', sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+/* 🌼 EP with Text Overlay */
+.ep-wrapper {
+  position: relative;
+  max-width: 500px;
+  margin: 80px auto 20px;
+  text-align: center;
+}
+
+.ep-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+.ep-text-overlay {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  color: white;
+  font-size: 24px;
+  font-family: 'Playfair Display', serif;
+  font-style: normal;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8);
+  line-height: 1.5;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Presave Button Below Image */
+.ep-wrapper .presave-btn {
+  margin-top: 16px;
+}

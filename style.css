@@ -170,6 +170,7 @@ body::before {
 
 /* 🌼 EP Section */
 .ep-section {
+  position: relative;
   max-width: 500px;
   margin: 60px auto 20px;
   text-align: center;
@@ -180,15 +181,19 @@ body::before {
   height: auto;
   border-radius: 12px;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
-.ep-info {
-  font-size: 16px;
-  color: #f2f2f2;
-  font-style: italic;
-  margin-bottom: 16px;
-  line-height: 1.5;
+.ep-overlay {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  padding: 0 20px;
 }
 
 .presave-btn {
@@ -197,8 +202,10 @@ body::before {
   padding: 12px 24px;
   text-decoration: none;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 16px;
   transition: background-color 0.3s ease;
+  margin-top: 12px;
+  display: inline-block;
 }
 
 .presave-btn:hover {
@@ -214,4 +221,7 @@ body::before {
   font-size: 14px;
   line-height: 1.6;
   color: #ddd;
+  font-family: 'Arial', sans-serif;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');

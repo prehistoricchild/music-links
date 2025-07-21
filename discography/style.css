@@ -1,12 +1,14 @@
 /* 🎵 Discography Section */
 .discography-section {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  align-items: flex-start;
+  gap: 40px;
   padding: 60px 20px;
+  flex-wrap: wrap;
 }
 
+/* Profile Cards */
 .profile-card {
   background-color: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(8px);
@@ -19,15 +21,25 @@
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
-.profile-card.large {
-  transform: scale(1.1);
-  z-index: 1;
+/* ✨ Blurhie main profile */
+.profile-card.blurhie {
+  transform: scale(1.3);
+  z-index: 2;
+  order: 2; /* middle */
+}
+
+/* Side profiles */
+.profile-card.imim {
+  order: 1;
+}
+.profile-card.cafe {
+  order: 3;
 }
 
 .profile-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.3);
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
-  z-index: 2;
+  z-index: 3;
 }
 
 .profile-card img {
@@ -37,6 +49,7 @@
   margin-bottom: 12px;
 }
 
+/* Streaming links */
 .profile-card .links {
   display: flex;
   flex-direction: column;
@@ -46,10 +59,13 @@
 .profile-card .links a {
   color: white;
   text-decoration: none;
-  font-size: 14px;
-  transition: color 0.2s ease;
+  font-size: 15px;
+  text-transform: lowercase;
+  opacity: 0.9;
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 .profile-card .links a:hover {
   color: #a2f5d5;
+  opacity: 1;
 }

@@ -35,6 +35,14 @@ body::before {
   justify-content: center;
 }
 
+/* ✅ New logo style */
+.logo {
+  width: 140px;
+  max-width: 80%;
+  margin-bottom: 20px;
+  display: block;
+}
+
 .profile-pic {
   width: 120px;
   height: 120px;

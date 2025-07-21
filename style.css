@@ -67,7 +67,6 @@ body::before {
   gap: 16px;
 }
 
-/* Word Images */
 .top-left img {
   height: 32px;
   width: auto;
@@ -76,7 +75,6 @@ body::before {
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-/* Updated Social Icons */
 .top-right img {
   width: 26px;
   height: 26px;
@@ -170,7 +168,7 @@ body::before {
   color: #a2f5d5;
 }
 
-/* 🌼 EP Section */
+/* 🌼 EP Section (legacy if not using overlay) */
 .ep-section {
   max-width: 500px;
   margin: 60px auto 20px;
@@ -183,6 +181,17 @@ body::before {
   border-radius: 12px;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
   margin-bottom: 20px;
+}
+
+/* About the EP */
+.ep-about {
+  max-width: 600px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ddd;
 }
 
 .ep-info {
@@ -207,49 +216,30 @@ body::before {
   background-color: #1ed760;
 }
 
-/* About the EP */
-.ep-about {
-  max-width: 600px;
-  margin: 40px auto 80px;
-  padding: 0 20px;
-  text-align: center;
-  font-size: 14px;
-  line-height: 1.6;
-  color: #ddd;
-}
-
 /* 🌼 EP with Text Overlay */
 .ep-wrapper {
   position: relative;
   max-width: 500px;
-  margin: 80px auto 20px;
+  margin: 160px auto 40px; /* pushed lower */
   text-align: center;
-}
-
-.ep-image {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
 }
 
 .ep-text-overlay {
   position: absolute;
-  top: 20%;
+  top: 12%;
   left: 50%;
-  transform: translate(-50%, -20%);
+  transform: translate(-50%, -12%);
   color: white;
-  font-size: 24px;
+  font-size: 18px;
   font-family: 'Playfair Display', serif;
   font-style: normal;
-  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
   line-height: 1.5;
   padding: 0 20px;
   width: 100%;
   box-sizing: border-box;
 }
 
-/* Presave Button Below Image */
 .ep-wrapper .presave-btn {
   margin-top: 16px;
 }

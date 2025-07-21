@@ -61,20 +61,16 @@ body::before {
   z-index: 2;
 }
 
-.top-left,
-.top-right {
-  display: flex;
-  gap: 16px;
-}
-
+/* Word Images — now smaller */
 .top-left img {
-  height: 32px;
+  height: 24px;       /* was 32px */
   width: auto;
   cursor: pointer;
   filter: brightness(100%);
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
+/* Updated Social Icons */
 .top-right img {
   width: 26px;
   height: 26px;
@@ -168,7 +164,7 @@ body::before {
   color: #a2f5d5;
 }
 
-/* 🌼 EP Section (legacy if not using overlay) */
+/* 🌼 EP Section (if still referenced) */
 .ep-section {
   max-width: 500px;
   margin: 60px auto 20px;

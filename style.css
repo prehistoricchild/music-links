@@ -31,6 +31,7 @@ body::before {
 .logo {
   width: 200px;
   height: auto;
+  cursor: pointer;
 }
 
 /* Subtitle */
@@ -58,16 +59,22 @@ body::before {
   z-index: 2;
 }
 
-.top-left {
-  display: flex;
-  gap: 16px;
-}
-
+.top-left,
 .top-right {
   display: flex;
   gap: 16px;
 }
 
+/* Word images on top-left */
+.top-left img {
+  height: 32px;       /* match visual height with socials */
+  width: auto;
+  cursor: pointer;
+  filter: brightness(100%);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Social icons on top-right */
 .top-right img {
   width: 32px;
   height: 32px;
@@ -76,14 +83,7 @@ body::before {
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-.top-left img {
-  height: 32px;
-  width: auto;
-  cursor: pointer;
-  filter: brightness(100%);
-  transition: transform 0.2s ease, filter 0.2s ease;
-}
-
+/* Hover effect for both */
 .top-left img:hover,
 .top-right img:hover {
   transform: scale(1.05);

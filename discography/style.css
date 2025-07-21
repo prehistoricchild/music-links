@@ -61,3 +61,58 @@
   box-shadow: 0 0 18px rgba(255,255,255,0.3);
   z-index: 2;
 }
+/* 🎵 Discography Section */
+.discography-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
+}
+
+.profile-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.profile-card.large {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.profile-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+  z-index: 2;
+}
+
+.profile-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.profile-card .links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.profile-card .links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.profile-card .links a:hover {
+  color: #a2f5d5;
+}

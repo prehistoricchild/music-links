@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>blurhie - contact</title>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    .email-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 100px 20px 60px;
+      text-align: center;
+    }
+
+    .email-text {
+      font-size: 16px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      color: white;
+      user-select: all;
+    }
+
+    .copy-button {
+      font-size: 14px;
+      color: #fff;
+      background-color: #444;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .copy-button:hover {
+      background-color: #14833b;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-left">
+      <a href="/video"><img src="/video.png" alt="Video" /></a>
+      <a href="/discography"><img src="/discography.png" alt="Discography" /></a>
+      <a href="/contact"><img src="/contact.png" alt="Contact" /></a>
+    </div>
+    <div class="top-right">
+      <a href="https://www.instagram.com/blurhie/" target="_blank"><img src="/instagram.png" alt="Instagram" /></a>
+      <a href="https://www.youtube.com/@blurhie" target="_blank"><img src="/youtube.png" alt="YouTube" /></a>
+      <a href="https://open.spotify.com/artist/1Xd1McRlmnoEWNLTGzkG1K" target="_blank"><img src="/spotify.png" alt="Spotify" /></a>
+      <a href="https://soundcloud.com/blurhie" target="_blank"><img src="/soundcloud.png" alt="SoundCloud" /></a>
+      <a href="https://music.apple.com/us/artist/blurhie/1602081536" target="_blank"><img src="/applemusic.png" alt="Apple Music" /></a>
+    </div>
+  </div>
+
+  <!-- Centered Logo -->
+  <div class="logo-header">
+    <a href="/"><img src="/blurhie-logo.png" alt="blurhie logo" class="logo" /></a>
+  </div>
+
+  <!-- Subtitle -->
+  <div class="container">
+    <p class="subtitle">contact</p>
+  </div>
+
+  <!-- Email Copy Section -->
+  <div class="email-container">
+    <div class="email-text" id="email">blurhie@gmail.com</div>
+    <button class="copy-button" onclick="copyEmail()">Copy Email</button>
+  </div>
+
+  <script>
+    function copyEmail() {
+      const email = document.getElementById("email").textContent;
+      navigator.clipboard.writeText(email).then(() => {
+        const button = document.querySelector(".copy-button");
+        const originalText = button.textContent;
+        button.textContent = "Copied ✔";
+        setTimeout(() => button.textContent = originalText, 2000);
+      });
+    }
+  </script>
+</body>
+</html>

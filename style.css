@@ -8,7 +8,7 @@ body {
   background-repeat: no-repeat;
   color: white;
   margin: 0; padding: 0;
-  height: 100vh; overflow-y: auto;
+  min-height: 100vh; overflow-y: auto;
   position: relative;
 }
 
@@ -27,7 +27,7 @@ body::before {
   margin-top: 60px;
 }
 .logo {
-  width: 250px; /* increased from 200px */
+  width: 250px;
   height: auto;
   cursor: pointer;
 }
@@ -39,14 +39,12 @@ body::before {
   display: flex; justify-content: space-between; align-items: center;
   z-index: 2;
 }
-
 /* Word Images (smaller) */
 .top-left img {
   height: 24px; width: auto;
   cursor: pointer; filter: brightness(100%);
   transition: transform 0.2s, filter 0.2s;
 }
-
 /* Social Icons */
 .top-right img {
   width: 26px; height: 26px; margin-left: 10px;
@@ -58,7 +56,7 @@ body::before {
   transform: scale(1.05); filter: brightness(150%);
 }
 
-/* Logo subtitle spacer */
+/* Subtitle spacer */
 .container {
   width: 100%; text-align: center; margin: 20px 0;
 }
@@ -145,4 +143,46 @@ body::before {
   max-width:600px; margin:40px auto 80px;
   padding:0 20px; text-align:center;
   font-size:14px; line-height:1.6; color:#ddd;
+}
+
+/* ==========================
+   Mobile Responsive Styles
+   ========================== */
+@media (max-width: 768px) {
+  .top-bar {
+    position: relative; top: 0; left: 0; right: 0;
+    padding: 10px 0;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .top-left, .top-right {
+    justify-content: center;
+    gap: 12px;
+  }
+  .logo-header {
+    margin-top: 40px;
+  }
+  .logo {
+    width: 180px;
+  }
+  .ep-section {
+    margin: 80px auto 20px;
+    padding: 0 10px;
+  }
+  .ep-info {
+    font-size: 16px;
+  }
+  .ep-image {
+    width: 100%;
+  }
+  .presave-btn {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 0;
+  }
+  .ep-about {
+    margin: 20px auto 40px;
+    padding: 0 10px;
+    font-size: 16px;
+  }
 }

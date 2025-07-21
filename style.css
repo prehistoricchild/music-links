@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  overflow-y: auto;
+  overflow-y: auto; /* ✅ SCROLLING ENABLED */
   position: relative;
 }
 
@@ -47,7 +47,7 @@ body::before {
   font-style: italic;
 }
 
-/* Top Bar */
+/* Top Bar Layout */
 .top-bar {
   position: absolute;
   top: 20px;
@@ -59,42 +59,38 @@ body::before {
   z-index: 2;
 }
 
-/* Word Images - Top Left */
-.top-left {
+.top-left,
+.top-right {
   display: flex;
-  gap: 14px;
+  gap: 16px;
 }
 
+/* Word Images */
 .top-left img {
-  height: 28px; /* ⬅️ Smaller word image size */
+  height: 32px;
   width: auto;
   cursor: pointer;
   filter: brightness(100%);
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-/* Social Icons - Top Right */
-.top-right {
-  display: flex;
-  gap: 24px; /* ⬅️ Added spacing between socials */
-}
-
+/* Updated Social Icons */
 .top-right img {
-  width: 32px;
-  height: 32px;
+  width: 26px; /* smaller size */
+  height: 26px;
+  margin-left: 10px; /* more space between icons */
   cursor: pointer;
   filter: brightness(100%);
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-/* Hover effect */
 .top-left img:hover,
 .top-right img:hover {
   transform: scale(1.05);
   filter: brightness(150%);
 }
 
-/* 🎥 Video Section (still needed on other pages) */
+/* 🎥 Video Section */
 #video {
   padding: 80px 20px 60px;
   text-align: center;
@@ -113,4 +109,60 @@ body::before {
   border: none;
   border-radius: 12px;
   box-shadow: 0 0 30px rgba(0,0,0,0.4);
+}
+
+/* 🎵 Discography Section */
+.discography-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
+}
+
+.profile-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.profile-card.large {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.profile-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+  z-index: 2;
+}
+
+.profile-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.profile-card .links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.profile-card .links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.profile-card .links a:hover {
+  color: #a2f5d5;
 }

@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  overflow-y: auto; /* ✅ SCROLLING ENABLED */
+  overflow-y: auto;
   position: relative;
 }
 
@@ -47,7 +47,7 @@ body::before {
   font-style: italic;
 }
 
-/* Top Left & Right Layout */
+/* Top Bar */
 .top-bar {
   position: absolute;
   top: 20px;
@@ -59,22 +59,26 @@ body::before {
   z-index: 2;
 }
 
-.top-left,
-.top-right {
+/* Word Images - Top Left */
+.top-left {
   display: flex;
-  gap: 16px;
+  gap: 14px;
 }
 
-/* Word images on top-left */
 .top-left img {
-  height: 32px;       /* match visual height with socials */
+  height: 28px; /* ⬅️ Smaller word image size */
   width: auto;
   cursor: pointer;
   filter: brightness(100%);
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-/* Social icons on top-right */
+/* Social Icons - Top Right */
+.top-right {
+  display: flex;
+  gap: 24px; /* ⬅️ Added spacing between socials */
+}
+
 .top-right img {
   width: 32px;
   height: 32px;
@@ -83,14 +87,14 @@ body::before {
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-/* Hover effect for both */
+/* Hover effect */
 .top-left img:hover,
 .top-right img:hover {
   transform: scale(1.05);
   filter: brightness(150%);
 }
 
-/* 🎥 Video Section */
+/* 🎥 Video Section (still needed on other pages) */
 #video {
   padding: 80px 20px 60px;
   text-align: center;

@@ -27,7 +27,8 @@ body::before {
   margin-top: 60px;
 }
 .logo {
-  width: 200px;
+  width: 250px; /* increased from 200px */
+  height: auto;
   cursor: pointer;
 }
 

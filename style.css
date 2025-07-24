@@ -71,7 +71,7 @@ body::before {
 }
 .top-right img {
   width: 26px; height: 26px;
-  margin-left: 20px; /* 🔧 Updated spacing */
+  margin-left: 20px;
   cursor: pointer; filter: brightness(100%);
   transition: transform 0.2s, filter 0.2s;
 }
@@ -140,7 +140,7 @@ body::before {
   max-width: 500px; margin: 120px auto 20px; text-align: center;
 }
 .ep-info {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Adobe Caslon Pro', 'Big Caslon', 'Caslon', 'Times New Roman', serif;
   font-size: 18px; color: #f2f2f2;
   font-style: italic; margin-bottom: 16px;
   line-height: 1.4;
@@ -186,15 +186,12 @@ body::before {
 
 /* ========= Mobile Adjustments ========= */
 @media (max-width: 768px) {
-  /* show hamburger, hide entire desktop top-bar */
   .menu-icon { display: block; }
   .top-bar   { display: none; }
 
-  /* shrink logo */
   .logo-header { margin-top: 40px; }
   .logo        { width: 180px; }
 
-  /* EP tweaks */
   .ep-section { margin: 80px auto 20px; padding: 0 10px; }
   .ep-info    { font-size: 16px; }
   .ep-image   { width: 100%; }

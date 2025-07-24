@@ -143,9 +143,11 @@ body::before {
 }
 .ep-info {
   font-family: 'Adobe Caslon Pro', 'Big Caslon', 'Caslon', 'Times New Roman', serif;
-  font-size: 18px; color: #f2f2f2;
-  font-style: italic; margin-bottom: 16px;
+  font-size: 18px;
+  color: #f2f2f2;
+  margin-bottom: 16px;
   line-height: 1.4;
+  font-style: normal;
 }
 .ep-date {
   display: inline-block;

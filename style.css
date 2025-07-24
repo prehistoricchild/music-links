@@ -137,7 +137,9 @@ body::before {
 
 /* 🌼 EP Section */
 .ep-section {
-  max-width: 500px; margin: 120px auto 20px; text-align: center;
+  max-width: 500px;
+  margin: 120px auto 120px;
+  text-align: center;
 }
 .ep-info {
   font-family: 'Adobe Caslon Pro', 'Big Caslon', 'Caslon', 'Times New Roman', serif;

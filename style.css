@@ -173,30 +173,6 @@ body::before {
   background: #1ed760;
 }
 
-/* About the EP */
-.ep-about {
-  max-width: 600px; margin: 40px auto 80px;
-  padding: 0 20px; text-align: center;
-  font-size: 14px; line-height: 1.6; color: #ddd;
-}
-
-/* —— Social Footer —— */
-.social-footer {
-  text-align: center; padding: 20px 0;
-}
-.social-footer a {
-  display: inline-block; margin: 0 12px;
-}
-.social-footer img {
-  width: 26px; height: 26px;
-  filter: brightness(100%);
-  transition: transform 0.2s, filter 0.2s;
-  cursor: pointer;
-}
-.social-footer img:hover {
-  transform: scale(1.1); filter: brightness(150%);
-}
-
 /* —— Album Selection Section —— */
 .album-selection-section {
   margin-top: 70px;
@@ -217,9 +193,14 @@ body::before {
   gap: 60px;
   margin-top: 0;
 }
+.album-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .album-item img {
-  width: 320px;
-  height: 320px;
+  width: 210px;
+  height: 210px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 0 24px rgba(0,0,0,0.18);
@@ -229,6 +210,15 @@ body::before {
 .album-item img:hover {
   transform: scale(1.035);
 }
+.album-caption {
+  margin-top: 18px;
+  color: #eee;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.04em;
+  text-align: center;
+  opacity: 0.92;
+}
 @media (max-width: 800px) {
   .album-selection-grid {
     flex-direction: column;
@@ -236,10 +226,27 @@ body::before {
     gap: 40px;
   }
   .album-item img {
-    width: 90vw;
-    max-width: 340px;
+    width: 60vw;
+    max-width: 220px;
     height: auto;
   }
+}
+
+/* —— Social Footer —— */
+.social-footer {
+  text-align: center; padding: 20px 0;
+}
+.social-footer a {
+  display: inline-block; margin: 0 12px;
+}
+.social-footer img {
+  width: 26px; height: 26px;
+  filter: brightness(100%);
+  transition: transform 0.2s, filter 0.2s;
+  cursor: pointer;
+}
+.social-footer img:hover {
+  transform: scale(1.1); filter: brightness(150%);
 }
 
 /* ========= Mobile Adjustments ========= */
@@ -255,6 +262,17 @@ body::before {
   .ep-image   { width: 100%; }
   .presave-btn {
     width: 100%; font-size: 16px; padding: 12px 0;
+  }
+  .album-item img {
+    width: 60vw; max-width: 180px; height: auto;
+  }
+  .album-selection-title {
+    font-size: 22px;
+    margin-bottom: 28px;
+  }
+  .album-caption {
+    font-size: 14px;
+    margin-top: 12px;
   }
   .ep-about {
     margin: 20px auto 40px; padding: 0 10px; font-size: 16px;

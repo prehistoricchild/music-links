@@ -197,6 +197,51 @@ body::before {
   transform: scale(1.1); filter: brightness(150%);
 }
 
+/* —— Album Selection Section —— */
+.album-selection-section {
+  margin-top: 70px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.album-selection-title {
+  font-family: 'Adobe Caslon Pro', 'Big Caslon', 'Caslon', 'Times New Roman', serif;
+  font-size: 30px;
+  color: #fff;
+  letter-spacing: 0.01em;
+  font-style: normal;
+  margin-bottom: 44px;
+}
+.album-selection-grid {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 0;
+}
+.album-item img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 24px rgba(0,0,0,0.18);
+  background: #232323;
+  transition: transform 0.3s;
+}
+.album-item img:hover {
+  transform: scale(1.035);
+}
+@media (max-width: 800px) {
+  .album-selection-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .album-item img {
+    width: 90vw;
+    max-width: 340px;
+    height: auto;
+  }
+}
+
 /* ========= Mobile Adjustments ========= */
 @media (max-width: 768px) {
   .menu-icon { display: block; }

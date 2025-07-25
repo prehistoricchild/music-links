@@ -148,8 +148,7 @@ body::before {
   margin-bottom: 36px;
   line-height: 1.4;
   font-style: normal;
-  white-space: nowrap;      /* This keeps the text on one line */
-  overflow-x: auto;         /* Allows horizontal scroll on overflow (for very small screens) */
+  /* no-wrap removed, now it will naturally overlap the image below if too wide */
 }
 .ep-date {
   display: inline-block;
@@ -268,7 +267,7 @@ body::before {
   .logo        { width: 180px; }
 
   .ep-section { margin: 80px auto 20px; padding: 0 10px; }
-  .ep-info    { font-size: 18px; }  /* Smaller for mobile, but still single line */
+  .ep-info    { font-size: 18px; }
   .ep-image   { width: 100%; }
   .presave-btn {
     width: 100%; font-size: 16px; padding: 12px 0;

@@ -143,14 +143,11 @@ body::before {
 }
 .ep-info {
   font-family: 'Adobe Caslon Pro', 'Big Caslon', 'Caslon', 'Times New Roman', serif;
-  font-size: 26px;        /* Bigger as requested */
+  font-size: 18px;
   color: #f2f2f2;
   margin-bottom: 36px;
-  line-height: 1.1;
+  line-height: 1.4;
   font-style: normal;
-  font-weight: bold;
-  white-space: normal;    /* ensures it will overlap the image if too wide */
-  overflow: visible;      /* no scroll, will simply run past image below */
 }
 .ep-date {
   display: inline-block;
@@ -209,7 +206,7 @@ body::before {
   border-radius: 10px;
   background: #232323;
   transition: transform 0.3s;
-  box-shadow: none;
+  box-shadow: none;    /* REMOVE any glow for all album images by default */
 }
 /* Only for 'me dying is the world ending' album image: sharp edges, no glow */
 .album-item img.album-image-square {
@@ -269,7 +266,7 @@ body::before {
   .logo        { width: 180px; }
 
   .ep-section { margin: 80px auto 20px; padding: 0 10px; }
-  .ep-info    { font-size: 18px; }
+  .ep-info    { font-size: 16px; }
   .ep-image   { width: 100%; }
   .presave-btn {
     width: 100%; font-size: 16px; padding: 12px 0;

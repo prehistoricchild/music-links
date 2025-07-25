@@ -143,11 +143,13 @@ body::before {
 }
 .ep-info {
   font-family: 'Adobe Caslon Pro', 'Big Caslon', 'Caslon', 'Times New Roman', serif;
-  font-size: 26px;           /* Increased size */
+  font-size: 26px;
   color: #f2f2f2;
   margin-bottom: 36px;
   line-height: 1.4;
   font-style: normal;
+  white-space: nowrap;      /* This keeps the text on one line */
+  overflow-x: auto;         /* Allows horizontal scroll on overflow (for very small screens) */
 }
 .ep-date {
   display: inline-block;
@@ -266,7 +268,7 @@ body::before {
   .logo        { width: 180px; }
 
   .ep-section { margin: 80px auto 20px; padding: 0 10px; }
-  .ep-info    { font-size: 22px; }  /* Slightly smaller for mobile */
+  .ep-info    { font-size: 18px; }  /* Smaller for mobile, but still single line */
   .ep-image   { width: 100%; }
   .presave-btn {
     width: 100%; font-size: 16px; padding: 12px 0;

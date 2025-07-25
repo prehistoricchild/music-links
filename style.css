@@ -145,7 +145,7 @@ body::before {
   font-family: 'Adobe Caslon Pro', 'Big Caslon', 'Caslon', 'Times New Roman', serif;
   font-size: 18px;
   color: #f2f2f2;
-  margin-bottom: 36px;   /* increased space below the text */
+  margin-bottom: 36px;
   line-height: 1.4;
   font-style: normal;
 }
@@ -159,8 +159,9 @@ body::before {
   margin-top: 4px;
 }
 .ep-image {
-  width: 100%; border-radius: 12px;
-  box-shadow: 0 0 25px rgba(255,255,255,0.2);
+  width: 100%;
+  border-radius: 0;           /* SHARP edges, not rounded */
+  box-shadow: none;           /* No glow at all */
   margin-bottom: 20px;
 }
 .presave-btn {
@@ -203,13 +204,14 @@ body::before {
   height: 210px;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 0 24px rgba(0,0,0,0.18);
   background: #232323;
   transition: transform 0.3s;
+  box-shadow: none;    /* REMOVE any glow for all album images by default */
 }
-/* Only for 'me dying is the world ending' album image: sharp edges */
+/* Only for 'me dying is the world ending' album image: sharp edges, no glow */
 .album-item img.album-image-square {
-  border-radius: 0;
+  border-radius: 0 !important;
+  box-shadow: none !important;
   transition: none;
 }
 .album-item img:hover {
@@ -280,8 +282,5 @@ body::before {
   .album-caption {
     font-size: 14px;
     margin-top: 12px;
-  }
-  .ep-about {
-    margin: 20px auto 40px; padding: 0 10px; font-size: 16px;
   }
 }

@@ -143,12 +143,14 @@ body::before {
 }
 .ep-info {
   font-family: 'Adobe Caslon Pro', 'Big Caslon', 'Caslon', 'Times New Roman', serif;
-  font-size: 26px;
+  font-size: 26px;        /* Bigger as requested */
   color: #f2f2f2;
   margin-bottom: 36px;
-  line-height: 1.4;
+  line-height: 1.1;
   font-style: normal;
-  /* no-wrap removed, now it will naturally overlap the image below if too wide */
+  font-weight: bold;
+  white-space: normal;    /* ensures it will overlap the image if too wide */
+  overflow: visible;      /* no scroll, will simply run past image below */
 }
 .ep-date {
   display: inline-block;

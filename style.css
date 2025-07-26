@@ -20,6 +20,11 @@ body::before {
   z-index: -1;
 }
 
+/* --- HIDE MOBILE MENU ON DESKTOP --- */
+.mobile-fullscreen-nav {
+  display: none !important;
+}
+
 /* —— Mobile Menu Toggle & Icon —— */
 .menu-toggle { display: none; }
 .menu-icon {
@@ -30,11 +35,6 @@ body::before {
   transition: color 0.2s;
 }
 .menu-icon:hover { color: #a2f5d5; }
-
-/* —— Fullscreen Mobile Menu —— */
-.mobile-fullscreen-nav {
-  display: none;
-}
 
 /* —— Desktop Top Bar —— */
 .top-bar {
@@ -236,17 +236,18 @@ body::before {
 
 /* ========= Mobile Adjustments ========= */
 @media (max-width: 768px) {
+
   .menu-icon { display: block; }
   .top-bar   { display: none !important; }
 
-  /* Mobile fullscreen nav styles */
+  /* --- MOBILE MENU: show only on mobile --- */
   .mobile-fullscreen-nav {
     position: fixed;
     inset: 0;
     width: 100vw; height: 100vh;
     background: rgba(15, 15, 15, 0.98);
     z-index: 199;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: center;
     align-items: center;

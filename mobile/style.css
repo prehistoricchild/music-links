@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
 body {
   font-family: Arial, sans-serif;
   background: #181818;
@@ -6,10 +8,8 @@ body {
   min-height: 100vh;
 }
 
-/* Hide the checkbox */
 .menu-toggle { display: none; }
 
-/* Burger icon always visible */
 .menu-icon {
   position: absolute; top: 24px; left: 20px;
   font-size: 34px; color: white; cursor: pointer;
@@ -17,7 +17,6 @@ body {
   display: block;
 }
 
-/* Fullscreen nav overlay (initially hidden) */
 .mobile-nav {
   position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
   background: rgba(0,0,0,0.96);
@@ -29,8 +28,6 @@ body {
   opacity: 1;
   pointer-events: auto;
 }
-
-/* Center links vertically */
 .mobile-links {
   display: flex; flex-direction: column; gap: 38px; align-items: center;
 }
@@ -41,7 +38,6 @@ body {
 }
 .mobile-links a:hover { color: #a2f5d5; }
 
-/* Socials pinned to bottom */
 .mobile-socials {
   display: flex; justify-content: center; gap: 36px;
   position: absolute; bottom: 48px; width: 100%;
@@ -52,7 +48,6 @@ body {
 }
 .mobile-socials img:hover { transform: scale(1.15); filter: brightness(150%); }
 
-/* Logo and EP content */
 .logo-header { text-align: center; margin-top: 80px; }
 .logo { width: 180px; }
 

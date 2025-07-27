@@ -20,32 +20,48 @@ body::before {
   z-index: -1;
 }
 
-/* —— Mobile Menu Toggle & Icon —— */
+/* —— Mobile Menu Toggle & Animated Burger/X —— */
 .menu-toggle { display: none; }
+
 .menu-icon {
   display: none;
-  position: absolute; top: 20px; left: 20px;
-  width: 38px;
-  height: 38px;
+  position: absolute;
+  top: 24px; left: 22px;
+  width: 44px; height: 44px;
   cursor: pointer;
-  z-index: 999;
+  z-index: 120;
   user-select: none;
-}
-.menu-icon .burger,
-.menu-icon .close {
-  display: none;
-  font-size: 32px;
-  line-height: 1;
-  color: white;
-  pointer-events: none;
 }
 @media (max-width: 768px) {
   .menu-icon { display: block; }
 
-  #menu-toggle:not(:checked) ~ .menu-icon .burger { display: inline; }
-  #menu-toggle:checked ~ .menu-icon .close { display: inline; }
-  #menu-toggle:not(:checked) ~ .menu-icon .close { display: none; }
-  #menu-toggle:checked ~ .menu-icon .burger { display: none; }
+  .icon-bar {
+    display: block;
+    position: absolute;
+    left: 7px;
+    width: 30px;
+    height: 3.5px;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.28s cubic-bezier(.4,2,.6,1);
+  }
+  .icon-bar.top    { top: 12px; }
+  .icon-bar.middle { top: 20.5px; }
+  .icon-bar.bottom { top: 29px; }
+
+  /* Animate to "X" when open */
+  #menu-toggle:checked ~ .menu-icon .icon-bar.top {
+    transform: rotate(45deg);
+    top: 20.5px;
+  }
+  #menu-toggle:checked ~ .menu-icon .icon-bar.middle {
+    opacity: 0;
+    left: 0;
+  }
+  #menu-toggle:checked ~ .menu-icon .icon-bar.bottom {
+    transform: rotate(-45deg);
+    top: 20.5px;
+  }
 }
 
 /* —— Mobile Drawer —— */
@@ -278,7 +294,6 @@ body::before {
 
 /* ========= Mobile Adjustments ========= */
 @media (max-width: 768px) {
-  .menu-icon { display: block; }
   .top-bar   { display: none; }
 
   /* Make the mobile menu fullscreen, blurred and transparent */
@@ -336,24 +351,4 @@ body::before {
   .mobile-socials img:hover { transform: scale(1.15); filter: brightness(150%); }
 
   .logo-header { margin-top: 40px; }
-  .logo        { width: 180px; }
-
-  .ep-section { margin: 80px auto 20px; padding: 0 10px; }
-  .ep-info    { font-size: 16px; }
-  .ep-image   { width: 100%; }
-  .presave-btn {
-    width: 100%; font-size: 16px; padding: 12px 0;
-  }
-  .album-item img,
-  .album-item img.album-image-square {
-    width: 60vw; max-width: 180px; height: auto;
-  }
-  .album-selection-title {
-    font-size: 22px;
-    margin-bottom: 28px;
-  }
-  .album-caption {
-    font-size: 14px;
-    margin-top: 12px;
-  }
-}
+  .logo        { width

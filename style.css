@@ -262,6 +262,59 @@ body::before {
   .menu-icon { display: block; }
   .top-bar   { display: none; }
 
+  /* Make the mobile menu fullscreen and centered */
+  .mobile-nav {
+    width: 100vw; max-width: 100vw; left: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.96);
+    position: fixed;
+    top: 0; height: 100vh;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 99;
+    transform: none !important;
+    transition: opacity 0.3s;
+  }
+  #menu-toggle:checked ~ .mobile-nav {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    align-items: center;
+  }
+  .mobile-links a {
+    color: white;
+    font-size: 2.1rem;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+  .mobile-links a:hover { color: #a2f5d5; }
+
+  .mobile-socials {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    position: absolute;
+    bottom: 48px;
+    width: 100%;
+  }
+  .mobile-socials img {
+    width: 28px;
+    filter: brightness(100%);
+    transition: transform 0.2s, filter 0.2s;
+  }
+  .mobile-socials img:hover { transform: scale(1.15); filter: brightness(150%); }
+
   .logo-header { margin-top: 40px; }
   .logo        { width: 180px; }
 

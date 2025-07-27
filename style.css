@@ -27,6 +27,26 @@ body::before {
   position: absolute; top: 20px; left: 20px;
   font-size: 28px; color: white; cursor: pointer;
   z-index: 99;
+  user-select: none;
+}
+.menu-icon .burger,
+.menu-icon .close {
+  display: none;
+  transition: opacity 0.2s;
+}
+.menu-icon .close {
+  font-size: 32px;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .menu-icon { display: block; }
+
+  /* Show burger when menu closed, X when open */
+  #menu-toggle:not(:checked) ~ .menu-icon .burger { display: inline; }
+  #menu-toggle:checked ~ .menu-icon .close { display: inline; }
+  #menu-toggle:not(:checked) ~ .menu-icon .close { display: none; }
+  #menu-toggle:checked ~ .menu-icon .burger { display: none; }
 }
 
 /* —— Mobile Drawer —— */
@@ -293,7 +313,7 @@ body::before {
   }
   .mobile-links a {
     color: white;
-    font-size: 1.3rem !important;   /* Make the menu items smaller */
+    font-size: 1.3rem !important;
     text-decoration: none;
     font-family: 'Playfair Display', serif;
     letter-spacing: 0.04em;
@@ -327,14 +347,3 @@ body::before {
   }
   .album-item img,
   .album-item img.album-image-square {
-    width: 60vw; max-width: 180px; height: auto;
-  }
-  .album-selection-title {
-    font-size: 22px;
-    margin-bottom: 28px;
-  }
-  .album-caption {
-    font-size: 14px;
-    margin-top: 12px;
-  }
-}

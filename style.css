@@ -196,7 +196,7 @@ body::before {
 }
 .ep-image {
   width: 100%;
-  border-radius: 0;
+  border-radius: 0;     /* SQUARE EDGES ON ALL DEVICES */
   box-shadow: none;
   margin-bottom: 20px;
 }
@@ -366,7 +366,7 @@ body::before {
     width: 70vw;
     max-width: 290px;
     margin-bottom: 18px;
-    border-radius: 8px;
+    border-radius: 0;  /* <-- SQUARE ON MOBILE TOO */
     box-shadow: 0 0 16px rgba(0,0,0,0.22);
     display: block;
     margin-left: auto;

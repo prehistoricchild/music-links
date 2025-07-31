@@ -213,7 +213,7 @@ body::before {
 /* —— Album Selection Section —— */
 .album-selection-section {
   margin-top: 70px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;   /* More space at the bottom for bandcamp logo */
   text-align: center;
 }
 .album-selection-title {
@@ -296,7 +296,7 @@ body::before {
 .bandcamp-logo-link {
   display: flex;
   justify-content: center;
-  margin: 34px 0 10px 0;
+  margin: 44px 0 10px 0;    /* Extra space above Bandcamp */
   width: 100%;
 }
 
@@ -304,24 +304,24 @@ body::before {
   width: 110px;
   height: auto;
   display: block;
-  border-radius: 8px;
+  border-radius: 0;         /* Square edges */
   background: #232323;
   box-shadow: 0 0 8px rgba(0,0,0,0.16);
-  transition: transform 0.17s, filter 0.2s;
+  transition: none;
   cursor: pointer;
 }
 .bandcamp-logo:hover {
-  filter: brightness(120%);
-  transform: scale(1.08) rotate(-5deg);
+  filter: none;
+  transform: none;
 }
 
 @media (max-width: 600px) {
   .bandcamp-logo {
     width: 75px;
-    border-radius: 6px;
+    border-radius: 0;
   }
   .bandcamp-logo-link {
-    margin: 22px 0 5px 0;
+    margin: 32px 0 5px 0;
   }
 }
 

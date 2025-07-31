@@ -251,14 +251,16 @@ body::before {
   transform: none;
   filter: none;
 }
+/* Calligraphy font for album caption */
 .album-caption {
   margin-top: 18px;
   color: #eee;
-  font-size: 16px;
-  font-family: Arial, sans-serif;
+  font-size: 22px;
+  font-family: 'Dancing Script', cursive, 'Arial', sans-serif;
   letter-spacing: 0.04em;
   text-align: center;
-  opacity: 0.92;
+  opacity: 0.95;
+  font-weight: 700;
 }
 @media (max-width: 800px) {
   .album-selection-grid {

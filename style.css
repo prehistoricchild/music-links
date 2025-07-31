@@ -234,13 +234,13 @@ body::before {
   flex-direction: column;
   align-items: center;
 }
-/* Remove all hover effects for album images */
+/* SQUARE CORNERS FOR ALL ALBUM IMAGES */
 .album-item img,
 .album-item img.album-image-square {
   width: 210px;
   height: 210px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 0;
   background: #232323;
   box-shadow: none;
   transition: none;
@@ -271,6 +271,7 @@ body::before {
     width: 60vw;
     max-width: 220px;
     height: auto;
+    border-radius: 0;
   }
 }
 

@@ -196,7 +196,7 @@ body::before {
 }
 .ep-image {
   width: 100%;
-  border-radius: 0;     /* SQUARE EDGES ON ALL DEVICES */
+  border-radius: 0;
   box-shadow: none;
   margin-bottom: 20px;
 }
@@ -292,73 +292,36 @@ body::before {
   transform: scale(1.1); filter: brightness(150%);
 }
 
-/* ========= Bandcamp Card (NEW) ========= */
-.bandcamp-support {
+/* ========== Bandcamp Logo Link ========== */
+.bandcamp-logo-link {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 34px 0 14px 0;
+  margin: 34px 0 10px 0;
   width: 100%;
 }
-.bandcamp-info {
-  background: rgba(30,30,30,0.55);
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.17);
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 18px 28px;
-  max-width: 410px;
-}
+
 .bandcamp-logo {
-  width: 70px;
+  width: 60px;
   height: auto;
-  border-radius: 8px;
-  background: #222;
-  box-shadow: 0 0 6px rgba(0,0,0,0.18);
   display: block;
+  border-radius: 8px;
+  background: #232323;
+  box-shadow: 0 0 8px rgba(0,0,0,0.16);
+  transition: transform 0.17s, filter 0.2s;
+  cursor: pointer;
 }
-.bandcamp-text {
-  font-size: 15px;
-  color: #e6e6e6;
-  margin: 0 0 5px 0;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-}
-.bandcamp-cta {
-  color: #a2f5d5;
-  font-weight: 600;
-  font-size: 14px;
-}
-.bandcamp-btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 18px;
-  font-size: 15px;
-  color: #fff;
-  background: #249c76;
-  border-radius: 7px;
-  text-decoration: none;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  box-shadow: 0 0 8px rgba(0,0,0,0.08);
-  transition: background 0.2s, transform 0.15s;
-}
-.bandcamp-btn:hover {
-  background: #1db954;
-  transform: translateY(-2px) scale(1.05);
+.bandcamp-logo:hover {
+  filter: brightness(120%);
+  transform: scale(1.08) rotate(-5deg);
 }
 
-/* Responsive for Bandcamp card */
 @media (max-width: 600px) {
-  .bandcamp-info {
-    flex-direction: column;
-    gap: 13px;
-    padding: 15px 11px;
-    max-width: 97vw;
-  }
   .bandcamp-logo {
-    width: 48px;
+    width: 40px;
+    border-radius: 6px;
+  }
+  .bandcamp-logo-link {
+    margin: 22px 0 5px 0;
   }
 }
 
@@ -382,64 +345,4 @@ body::before {
     pointer-events: none;
     z-index: 99;
     transform: none !important;
-    transition: opacity 0.3s;
-  }
-  #menu-toggle:checked ~ .mobile-nav {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .mobile-links {
-    display: flex;
-    flex-direction: column;
-    gap: 38px;
-    align-items: center;
-  }
-  .mobile-links a {
-    color: white;
-    font-size: 1.3rem !important;
-    text-decoration: none;
-    font-family: 'Playfair Display', serif;
-    letter-spacing: 0.04em;
-    transition: color 0.2s;
-  }
-  .mobile-links a:hover { color: #a2f5d5; }
-
-  .mobile-socials {
-    display: flex;
-    justify-content: center;
-    gap: 36px;
-    position: absolute;
-    bottom: 48px;
-    width: 100%;
-  }
-  .mobile-socials img {
-    width: 28px;
-    filter: brightness(100%);
-    transition: transform 0.2s, filter 0.2s;
-  }
-  .mobile-socials img:hover { transform: scale(1.15); filter: brightness(150%); }
-
-  .logo-header { margin-top: 40px; }
-  .logo        { width: 150px; }
-}
-
-/* ==== MOBILE EP IMAGE FIX ==== */
-@media (max-width: 768px) {
-  .ep-section {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: 0 0 32px 0;
-  }
-  .ep-image {
-    width: 70vw;
-    max-width: 290px;
-    margin-bottom: 18px;
-    border-radius: 0;  /* <-- SQUARE ON MOBILE TOO */
-    box-shadow: 0 0 16px rgba(0,0,0,0.22);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
+   

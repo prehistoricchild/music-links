@@ -212,7 +212,7 @@ body::before {
 /* —— Album Selection Section —— */
 .album-selection-section {
   margin-top: 70px;
-  margin-bottom: 80px;   /* More space at the bottom for bandcamp logo */
+  margin-bottom: 80px;
   text-align: center;
 }
 .album-selection-title {
@@ -234,22 +234,22 @@ body::before {
   flex-direction: column;
   align-items: center;
 }
-.album-item img {
+/* Remove all hover effects for album images */
+.album-item img,
+.album-item img.album-image-square {
   width: 210px;
   height: 210px;
   object-fit: cover;
   border-radius: 10px;
   background: #232323;
-  transition: transform 0.3s;
   box-shadow: none;
-}
-.album-item img.album-image-square {
-  border-radius: 0 !important;
-  box-shadow: none !important;
   transition: none;
 }
-.album-item img:hover {
-  transform: scale(1.035);
+/* Remove the hover zoom for album images */
+.album-item img:hover,
+.album-item img.album-image-square:hover {
+  transform: none;
+  filter: none;
 }
 .album-caption {
   margin-top: 18px;
@@ -304,7 +304,7 @@ body::before {
   height: auto;
   display: block;
   border-radius: 0;         /* Square edges */
-  background: transparent;  /* Transparent, won't override PNG baked color */
+  background: transparent;
   box-shadow: none;
   transition: none;
   cursor: pointer;
@@ -330,7 +330,6 @@ body::before {
 @media (max-width: 768px) {
   .top-bar   { display: none; }
 
-  /* Make the mobile menu fullscreen, blurred and transparent */
   .mobile-nav {
     width: 100vw; max-width: 100vw; left: 0;
     padding: 0;
@@ -388,7 +387,6 @@ body::before {
   .logo        { width: 150px; }
 }
 
-/* ==== MOBILE EP IMAGE FIX ==== */
 @media (max-width: 768px) {
   .ep-section {
     align-items: center;

@@ -248,7 +248,7 @@ body::before {
 .album-caption {
   margin-top: 18px;
   color: #eee;
-  font-size: 22px;
+  font-size: 20px;                 /* Now matches .ep-info size */
   font-family: 'Emilys Candy', cursive;
   letter-spacing: 0.04em;
   text-align: center;

@@ -3,10 +3,11 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-image: url("/background.jpg");  /* <-- ABSOLUTE PATH IS THE FIX */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url('/background.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
   color: white;
   margin: 0;
   padding: 0;
@@ -321,9 +322,6 @@ body::before {
 
 /* ========= Mobile Adjustments ========= */
 @media (max-width: 768px) {
-  body {
-    background-image: url("/background.jpg"); /* ENSURE ON MOBILE TOO */
-  }
   .top-bar   { display: none; }
 
   /* Make the mobile menu fullscreen, blurred and transparent */
@@ -396,10 +394,21 @@ body::before {
     width: 70vw;
     max-width: 290px;
     margin-bottom: 18px;
-    border-radius: 0;
+    border-radius: 0;  /* <-- SQUARE ON MOBILE TOO */
     box-shadow: 0 0 16px rgba(0,0,0,0.22);
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+/* —— FORCE iOS TO USE BACKGROUND —— */
+@media (max-width: 8000px) {
+  body {
+    background-image: url('/background.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
   }
 }

@@ -275,19 +275,6 @@ body::before {
 .album-caption-link {
   text-decoration: none;
 }
-@media (max-width: 800px) {
-  .album-selection-grid {
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-  }
-  .album-item img,
-  .album-item img.album-image-square {
-    width: 60vw;
-    max-width: 220px;
-    height: auto;
-  }
-}
 
 /* ===== Bandcamp Logo Link Section ===== */
 .bandcamp-logo-link {
@@ -405,4 +392,16 @@ body::before {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+/* ==== DESKTOP DISCOGRAPHY ORDER FIX ==== */
+@media (min-width: 801px) {
+  .discography-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  .imim-card { order: 1; }
+  .blurhie-card { order: 2; }
+  .cafe-card { order: 3; }
 }

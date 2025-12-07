@@ -195,7 +195,7 @@ body::before {
   .cafe-card { order: 3; }
 }
 
-/* 🌼 EP Section */
+/* 🌼 EP Section (currently unused but kept for future) */
 .ep-section {
   max-width: 500px;
   margin: 120px auto 120px;
@@ -253,6 +253,7 @@ body::before {
   justify-content: center;
   gap: 60px;
   margin-top: 0;
+  flex-wrap: wrap;           /* ✅ allows multiple albums to wrap on smaller screens */
 }
 .album-item {
   display: flex;
@@ -385,6 +386,10 @@ body::before {
 
   .logo-header { margin-top: 40px; }
   .logo        { width: 150px; }
+
+  /* ✅ Slightly tighter album spacing on mobile */
+  .album-selection-section { margin-top: 50px; }
+  .album-selection-grid { gap: 32px; }
 }
 
 /* ==== MOBILE EP IMAGE FIX ==== */

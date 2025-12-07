@@ -1,78 +1,106 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/index.html b/index.html
-index 36d3dd72fa4842fd60e303024f7680cce0e1659c..b651bcccbd67f04baa91714461187ae26bb1a0f2 100644
---- a/index.html
-+++ b/index.html
-@@ -32,67 +32,52 @@
-     </div>
-   </nav>
-   <!-- ============================== -->
- 
-   <!-- Desktop top bar with words and socials -->
-   <div class="top-bar">
-     <div class="top-left">
-       <a href="/video"><img src="video.png" alt="Video" /></a>
-       <a href="/discography"><img src="discography.png" alt="Discography" /></a>
-       <a href="/contact"><img src="contact.png" alt="Contact" /></a>
-     </div>
-     <div class="top-right">
-       <a href="https://www.instagram.com/blurhie/" target="_blank"><img src="instagram.png" alt="Instagram" /></a>
-       <a href="https://www.youtube.com/@blurhie" target="_blank"><img src="youtube.png" alt="YouTube" /></a>
-       <a href="https://open.spotify.com/artist/1Xd1McRlmnoEWNLTGzkG1K" target="_blank"><img src="spotify.png" alt="Spotify" /></a>
-       <a href="https://soundcloud.com/blurhie" target="_blank"><img src="soundcloud.png" alt="SoundCloud" /></a>
-       <a href="https://music.apple.com/us/artist/blurhie/1602081536" target="_blank"><img src="applemusic.png" alt="Apple Music" /></a>
-     </div>
-   </div>
- 
-   <!-- Logo at top center -->
-   <div class="logo-header">
-     <a href="/"><img src="blurhie-logo.png" alt="blurhie logo" class="logo" /></a>
-   </div>
- 
--  <!-- 🌼 EP Section (text above image) -->
--  <div class="ep-section">
--    <p class="ep-info">
--      a dandelion stuck in her eye
--    </p>
--    <a href="https://open.spotify.com/prerelease/5oeEsm6oLqArL9wysrI4pH?si=1cace70d8f24466c" target="_blank">
--      <img src="adsihe.jpg" alt="a dandelion stuck in her eye cover" class="ep-image" />
--    </a>
--    <a href="https://open.spotify.com/prerelease/5oeEsm6oLqArL9wysrI4pH?si=1cace70d8f24466c"
--       target="_blank"
--       class="presave-btn">
--      presave on spotify
--    </a>
--  </div>
--
--  <!-- Album Selection Section (only me dying is the world ending) -->
--  <div class="album-selection-section">
-+  <!-- Album Selection Section (only me dying is the world ending) -->
-+  <div class="album-selection-section">
-     <div class="album-selection-title">album selection</div>
-     <div class="album-selection-grid">
-       <div class="album-item">
-         <a href="https://open.spotify.com/album/4nvXVTyouur96FIYMykEuU?si=onYUXs4gRHam2Plphuv4GQ" target="_blank">
-           <img src="me-dying-album.jpg" alt="me dying is the world ending album" class="album-image-square" />
-         </a>
-         <a href="https://open.spotify.com/album/4nvXVTyouur96FIYMykEuU?si=onYUXs4gRHam2Plphuv4GQ" target="_blank" class="album-caption-link">
-           <div class="album-caption">
-             me dying is the world ending
-           </div>
-         </a>
-       </div>
-     </div>
-   </div>
- 
-   <!-- ========== Bandcamp Logo Link ========== -->
-   <div class="bandcamp-logo-link">
-     <a href="https://blurhie.bandcamp.com/track/involves-sex-to-silence-ones-emotions" target="_blank">
-       <img src="bandcamp-logo.png" alt="Bandcamp" class="bandcamp-logo">
-     </a>
-   </div>
-   <!-- ======================================== -->
- 
-   <!-- Social icons at the bottom of the page -->
-   <div class="social-footer">
- 
-EOF
-)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>blurhie</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Emilys Candy font for album caption -->
+  <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ===== Mobile slide-out menu ===== -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+  <label for="menu-toggle" class="menu-icon">
+    <span class="icon-bar top"></span>
+    <span class="icon-bar middle"></span>
+    <span class="icon-bar bottom"></span>
+  </label>
+
+  <nav class="mobile-nav">
+    <div class="mobile-links">
+      <a href="/video">video</a>
+      <a href="/discography">discography</a>
+      <a href="/contact">contact</a>
+    </div>
+    <div class="mobile-socials">
+      <a href="https://www.instagram.com/blurhie/" target="_blank"><img src="instagram.png" alt="Instagram" /></a>
+      <a href="https://www.youtube.com/@blurhie" target="_blank"><img src="youtube.png" alt="YouTube" /></a>
+      <a href="https://open.spotify.com/artist/1Xd1McRlmnoEWNLTGzkG1K" target="_blank"><img src="spotify.png" alt="Spotify" /></a>
+      <a href="https://soundcloud.com/blurhie" target="_blank"><img src="soundcloud.png" alt="SoundCloud" /></a>
+      <a href="https://music.apple.com/us/artist/blurhie/1602081536" target="_blank"><img src="applemusic.png" alt="Apple Music" /></a>
+    </div>
+  </nav>
+  <!-- ============================== -->
+
+  <!-- Desktop top bar with words and socials -->
+  <div class="top-bar">
+    <div class="top-left">
+      <a href="/video"><img src="video.png" alt="Video" /></a>
+      <a href="/discography"><img src="discography.png" alt="Discography" /></a>
+      <a href="/contact"><img src="contact.png" alt="Contact" /></a>
+    </div>
+    <div class="top-right">
+      <a href="https://www.instagram.com/blurhie/" target="_blank"><img src="instagram.png" alt="Instagram" /></a>
+      <a href="https://www.youtube.com/@blurhie" target="_blank"><img src="youtube.png" alt="YouTube" /></a>
+      <a href="https://open.spotify.com/artist/1Xd1McRlmnoEWNLTGzkG1K" target="_blank"><img src="spotify.png" alt="Spotify" /></a>
+      <a href="https://soundcloud.com/blurhie" target="_blank"><img src="soundcloud.png" alt="SoundCloud" /></a>
+      <a href="https://music.apple.com/us/artist/blurhie/1602081536" target="_blank"><img src="applemusic.png" alt="Apple Music" /></a>
+    </div>
+  </div>
+
+  <!-- Logo at top center -->
+  <div class="logo-header">
+    <a href="/"><img src="blurhie-logo.png" alt="blurhie logo" class="logo" /></a>
+  </div>
+
+  <!-- 🌼 EP Section (text above image) -->
+  <div class="ep-section">
+    <p class="ep-info">
+      a dandelion stuck in her eye
+    </p>
+    <a href="https://open.spotify.com/prerelease/5oeEsm6oLqArL9wysrI4pH?si=1cace70d8f24466c" target="_blank">
+      <img src="adsihe.jpg" alt="a dandelion stuck in her eye cover" class="ep-image" />
+    </a>
+    <a href="https://open.spotify.com/prerelease/5oeEsm6oLqArL9wysrI4pH?si=1cace70d8f24466c"
+       target="_blank"
+       class="presave-btn">
+      presave on spotify
+    </a>
+  </div>
+
+  <!-- Album Selection Section (only me dying is the world ending) -->
+  <div class="album-selection-section">
+    <div class="album-selection-title">album selection</div>
+    <div class="album-selection-grid">
+      <div class="album-item">
+        <a href="https://open.spotify.com/album/4nvXVTyouur96FIYMykEuU?si=onYUXs4gRHam2Plphuv4GQ" target="_blank">
+          <img src="me-dying-album.jpg" alt="me dying is the world ending album" class="album-image-square" />
+        </a>
+        <a href="https://open.spotify.com/album/4nvXVTyouur96FIYMykEuU?si=onYUXs4gRHam2Plphuv4GQ" target="_blank" class="album-caption-link">
+          <div class="album-caption">
+            me dying is the world ending
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== Bandcamp Logo Link ========== -->
+  <div class="bandcamp-logo-link">
+    <a href="https://blurhie.bandcamp.com/track/involves-sex-to-silence-ones-emotions" target="_blank">
+      <img src="bandcamp-logo.png" alt="Bandcamp" class="bandcamp-logo">
+    </a>
+  </div>
+  <!-- ======================================== -->
+
+  <!-- Social icons at the bottom of the page -->
+  <div class="social-footer">
+    <a href="https://www.instagram.com/blurhie/" target="_blank"><img src="instagram.png" alt="Instagram" /></a>
+    <a href="https://www.youtube.com/@blurhie" target="_blank"><img src="youtube.png" alt="YouTube" /></a>
+    <a href="https://open.spotify.com/artist/1Xd1McRlmnoEWNLTGzkG1K" target="_blank"><img src="spotify.png" alt="Spotify" /></a>
+    <a href="https://soundcloud.com/blurhie" target="_blank"><img src="soundcloud.png" alt="SoundCloud" /></a>
+    <a href="https://music.apple.com/us/artist/blurhie/1602081536" target="_blank"><img src="applemusic.png" alt="Apple Music" /></a>
+  </div>
+</body>
+</html>

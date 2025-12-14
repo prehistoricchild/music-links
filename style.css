@@ -423,3 +423,15 @@ body::before {
   .blurhie-card { order: 2; }
   .cafe-card { order: 3; }
 }
+
+/* ✨ Latest Release Hover Effect (FF9B45) */
+.latest-release-img {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.latest-release-img:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 0 2px rgba(255, 155, 69, 0.35),
+    0 0 40px rgba(255, 155, 69, 0.45);
+}

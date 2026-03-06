@@ -107,7 +107,7 @@ body::before {
 
 /* —— Desktop Top Bar —— */
 .top-bar {
-  position: absolute; top: 115px; left: 20px; right: 20px;
+  position: absolute; top: 70px; left: 20px; right: 20px;
   display: flex; justify-content: space-between; align-items: center;
   z-index: 2;
 }

@@ -114,8 +114,9 @@ body::before {
 
 .top-left {
   display: flex;
-  gap: 25px;
+  gap: 30px;
   align-items: center;
+  margin-left: 30px;
 }
 
 .top-left a {

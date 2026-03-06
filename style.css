@@ -140,6 +140,7 @@ body::before {
   display: flex;
   gap: 30px;
   align-items: center;
+  margin-right: 60px;
 }
 
 .top-right img {

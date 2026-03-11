@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>blurhie - contact</title>
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
   <link rel="stylesheet" href="../style.css" />
   <style>
     .email-container {
@@ -89,7 +90,7 @@
 
   <!-- Email Copy Section -->
   <div class="email-container">
-    <div class="email-text" id="email">blurhie@gmail.com</div>
+    <div class="email-text" id="email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="89ebe5fcfbe1e0ecc9eee4e8e0e5a7eae6e4">[email&#160;protected]</a></div>
     <button class="copy-button" onclick="copyEmail()">Copy Email</button>
   </div>
 
@@ -102,16 +103,8 @@
     <a href="https://music.apple.com/us/artist/blurhie/1602081536" target="_blank"><img src="/applemusic.png" alt="Apple Music" /></a>
   </div>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     function copyEmail() {
       const email = document.getElementById("email").textContent;
       navigator.clipboard.writeText(email).then(() => {
-        const button = document.querySelector(".copy-button");
-        const originalText = button.textContent;
-        button.textContent = "Copied ✔";
-        setTimeout(() => button.textContent = originalText, 2000);
-      });
-    }
-  </script>
-</body>
-</html>
+        const button = document.queryS

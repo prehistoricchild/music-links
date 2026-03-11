@@ -103,8 +103,16 @@
     <a href="https://music.apple.com/us/artist/blurhie/1602081536" target="_blank"><img src="/applemusic.png" alt="Apple Music" /></a>
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     function copyEmail() {
       const email = document.getElementById("email").textContent;
       navigator.clipboard.writeText(email).then(() => {
-        const button = document.queryS
+        const button = document.querySelector(".copy-button");
+        const originalText = button.textContent;
+        button.textContent = "Copied ✔";
+        setTimeout(() => button.textContent = originalText, 2000);
+      });
+    }
+  </script>
+</body>
+</html>

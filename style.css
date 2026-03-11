@@ -252,10 +252,17 @@ body::before {
   margin-bottom: 20px;
 }
 .presave-btn {
-  display: inline-block; background: #1db954; color: white;
-  padding: 12px 24px; border-radius: 8px;
-  text-decoration: none; font-size: 14px;
+  display: inline-block;
+  margin-top: 16px;
+  background: #1db954;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'Emilys Candy', cursive;
   transition: background-color 0.3s;
+  cursor: pointer;
 }
 .presave-btn:hover {
   background: #1ed760;

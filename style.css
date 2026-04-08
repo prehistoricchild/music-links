@@ -254,9 +254,9 @@ body::before {
 }
 
 .link-box:hover {
-  border-color: #a2f5d5;
-  background: rgba(162, 245, 213, 0.1);
-  color: #a2f5d5 !important;
+  border-color: #c4956f;
+  background: rgba(196, 149, 111, 0.1);
+  color: #c4956f !important;
 }
 
 /* Mobile order override */

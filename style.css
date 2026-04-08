@@ -218,6 +218,14 @@ body::before {
 .featured-artist {
   max-width: 400px;
   margin: 0 auto;
+  background: none;
+  backdrop-filter: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  width: auto;
+  box-shadow: none;
+  text-align: center;
 }
 
 .featured-artist img {

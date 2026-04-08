@@ -215,6 +215,40 @@ body::before {
   color: #a2f5d5;
 }
 
+.featured-artist {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.featured-artist img {
+  width: 280px;
+  height: 280px;
+  border-radius: 0 !important;
+  margin-bottom: 20px;
+}
+
+.featured-artist .links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.link-box {
+  display: block;
+  padding: 12px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  font-size: 15px !important;
+  transition: all 0.2s;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.link-box:hover {
+  border-color: #a2f5d5;
+  background: rgba(162, 245, 213, 0.1);
+  color: #a2f5d5 !important;
+}
+
 /* Mobile order override */
 @media (max-width: 768px) {
   .imim-card { order: 2; }

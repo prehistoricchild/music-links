@@ -225,6 +225,8 @@ body::before {
   height: 280px;
   border-radius: 0 !important;
   margin-bottom: 20px;
+  box-shadow: none;
+  border: none;
 }
 
 .featured-artist .links {

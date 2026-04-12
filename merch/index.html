@@ -16,19 +16,29 @@
       text-align: center;
       min-height: 60vh;
     }
-
     .merch-title {
       font-family: 'Emilys Candy', cursive;
       font-size: 2.5rem;
       color: white;
       margin-top: 20px;
     }
-
-    .merch-message {
-      font-size: 1.1rem;
-      color: #e0e0e0;
-      margin-top: 20px;
-      font-style: italic;
+    .loading-dots {
+      animation: blink 1.4s infinite;
+      margin-left: 2px;
+    }
+    .loading-dots:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    .loading-dots:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+    @keyframes blink {
+      0%, 60%, 100% {
+        opacity: 0.3;
+      }
+      30% {
+        opacity: 1;
+      }
     }
   </style>
 </head>
@@ -40,7 +50,6 @@
     <span class="icon-bar middle"></span>
     <span class="icon-bar bottom"></span>
   </label>
-
   <nav class="mobile-nav">
     <div class="mobile-links">
       <a href="/video">video</a>
@@ -57,7 +66,6 @@
     </div>
   </nav>
   <!-- ============================== -->
-
   <!-- Desktop Top Bar -->
   <div class="top-bar">
     <div class="top-left">
@@ -74,18 +82,14 @@
       <a href="https://music.apple.com/us/artist/blurhie/1602081536" target="_blank"><img src="/applemusic.png" alt="Apple Music" /></a>
     </div>
   </div>
-
   <!-- Logo -->
   <div class="logo-header">
     <a href="/"><img src="/blurhie-logo.png" alt="blurhie logo" class="logo" /></a>
   </div>
-
   <!-- Merch Coming Soon Section -->
   <div class="merch-container">
-    <div class="merch-title">merch coming soon</div>
-    <p class="merch-message">cd's and exclusive merchandise coming your way</p>
+    <div class="merch-title">merch coming soon<span class="loading-dots">.</span><span class="loading-dots">.</span><span class="loading-dots">.</span></div>
   </div>
-
   <!-- Social icons at the bottom of the page -->
   <div class="social-footer">
     <a href="https://www.instagram.com/blurhie/" target="_blank"><img src="/instagram.png" alt="Instagram" /></a>

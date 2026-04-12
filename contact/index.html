@@ -55,6 +55,7 @@
     <div class="mobile-links">
       <a href="/video">video</a>
       <a href="/discography">discography</a>
+      <a href="/merch">merch</a>
       <a href="/contact">contact</a>
     </div>
     <div class="mobile-socials">
@@ -72,6 +73,7 @@
     <div class="top-left">
       <a href="/video" class="nav-text">Video</a>
       <a href="/discography" class="nav-text">Discography</a>
+      <a href="/merch" class="nav-text">Merch</a>
       <a href="/contact" class="nav-text">Contact</a>
     </div>
     <div class="top-right">
@@ -90,7 +92,7 @@
 
   <!-- Email Copy Section -->
   <div class="email-container">
-    <div class="email-text" id="email">blurhie@gmail.com</div>
+    <div class="email-text" id="email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d1b3bda4a3b9b8b491b6bcb0b8bdffb2bebc">[email&#160;protected]</a></div>
     <button class="copy-button" onclick="copyEmail()">Copy Email</button>
   </div>
 
@@ -103,16 +105,8 @@
     <a href="https://music.apple.com/us/artist/blurhie/1602081536" target="_blank"><img src="/applemusic.png" alt="Apple Music" /></a>
   </div>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     function copyEmail() {
       const email = document.getElementById("email").textContent;
       navigator.clipboard.writeText(email).then(() => {
-        const button = document.querySelector(".copy-button");
-        const originalText = button.textContent;
-        button.textContent = "Copied ✔";
-        setTimeout(() => button.textContent = originalText, 2000);
-      });
-    }
-  </script>
-</body>
-</html>
+        const button = document.queryS

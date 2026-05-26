@@ -46,6 +46,12 @@
       height: auto;
       border-radius: 8px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .merch-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     }
     @media (max-width: 768px) {
       .merch-image {
@@ -100,7 +106,9 @@
   </div>
   <!-- Merch Coming Soon Section -->
   <div class="merch-container">
-    <img src="/merch-image.jpg" alt="merch preview" class="merch-image" />
+    <a href="https://blurhie.bandcamp.com/album/although-you-hurt-me-i-still-love-you" target="_blank">
+      <img src="/merch-image.jpg" alt="merch preview" class="merch-image" />
+    </a>
   </div>
   <!-- Social icons at the bottom of the page -->
   <div class="social-footer">

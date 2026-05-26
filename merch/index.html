@@ -40,6 +40,18 @@
         opacity: 1;
       }
     }
+    .merch-image {
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    @media (max-width: 768px) {
+      .merch-image {
+        max-width: 350px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -88,7 +100,7 @@
   </div>
   <!-- Merch Coming Soon Section -->
   <div class="merch-container">
-    <div class="merch-title">merch coming soon<span class="loading-dots">.</span><span class="loading-dots">.</span><span class="loading-dots">.</span></div>
+    <img src="/merch-image.jpg" alt="merch preview" class="merch-image" />
   </div>
   <!-- Social icons at the bottom of the page -->
   <div class="social-footer">
